@@ -1,12 +1,16 @@
 #!/usr/bin/python3
 import sys
 
+
 def factorial(n):
     result = 1
     while n > 1:
         result *= n
-        n -= 1  # Décrémente n pour éviter la boucle infinie
+        n -= 1
     return result
 
-f = factorial(int(sys.argv[1]))
-print(f)
+
+if __name__ == "__main__":
+    if len(sys.argv) > 1:
+        f = factorial(int(sys.argv[1]))
+        print(f)
